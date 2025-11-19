@@ -9,3 +9,11 @@
  *
  * https://refactoring.guru/es/design-patterns/singleton
  */
+
+import { configManager } from "./singleton/config-manager.ts";
+
+configManager.setConfig('apiKey', '123456789');
+configManager.setConfig('timout', '1000');
+
+console.log(configManager.getConfig('apiKey'));
+console.log(configManager.getConfig('timout'));
